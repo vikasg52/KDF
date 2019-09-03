@@ -62,19 +62,22 @@ public class ActionKeywords {
  }
  
  
- public static void input_UserName(String Object){	 
- driver.findElement(By.xpath(OR.getProperty(Object))).sendKeys(Constants.UserName);  
+ public static void input_UserName(String object){	 
+ Logs.info("Input value in WebElement"+object);
+ driver.findElement(By.xpath(OR.getProperty(object))).sendKeys(Constants.UserName);  
  System.out.println("Input user name");
  }
  
  
- public static void input_Password(String object){	 
+ public static void input_Password(String object){
+ Logs.info("Input value in WebElement"+object);
  driver.findElement(By.xpath(OR.getProperty(object))).sendKeys(Constants.Password);
  System.out.println("Input password");
  }
  
  
  public static void click_LoginButton(String object){
+Logs.info("Clicking on WebElement"+object);
  driver.findElement(By.xpath(OR.getProperty(object))).click();
  System.out.println("Click on Login button");
  }
@@ -86,19 +89,23 @@ public class ActionKeywords {
  }
  
  
- public static void click_UserName(){
- driver.findElement(By.xpath("//p[contains(text(),'Welcome Vikas Garg')]")).click();
- System.out.println("Click user name");
+ public static void click_UserName(String object)
+ {
+	 Logs.info("Clicking on WebElement"+object);
+	 driver.findElement(By.xpath(OR.getProperty(object))).click();
+	 System.out.println("Click user name");
  }
  
  
- public static void click_Logout(){
- driver.findElement(By.xpath("//a[@href='https://www.whizdomtraining.com/user/home/logout']")).click();
- System.out.println("Click Logout link");
-	String s= driver.findElement(By.xpath("//h4[@class='color-orange text-center']")).getText();
-	if(s.equalsIgnoreCase("PLEASE LOGIN")==true) {
-		System.out.println("Logout success");
-	}else {System.out.println("Logut Failed!!");}
+ public static void click_Logout(String object1, String object2){
+	 Logs.info("Clicking on WebElement"+object1);
+	 driver.findElement(By.xpath(OR.getProperty(object1))).click();
+	 System.out.println("Clicked Logout link");
+	 Logs.info("Clicking on WebElement"+object2);
+	 String s= driver.findElement(By.xpath(OR.getProperty(object2))).getText();
+	 if(s.equalsIgnoreCase("PLEASE LOGIN")==true) {
+		 System.out.println("Logout success");
+	 }else {System.out.println("Logut Failed!!");}
  }
  
  
