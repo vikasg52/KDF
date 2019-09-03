@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="34893" started-at="2019-09-03T13:07:25Z" finished-at="2019-09-03T13:08:00Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="34893" started-at="2019-09-03T13:07:25Z" finished-at="2019-09-03T13:08:00Z">
+      <class name="executionEngine.test">
+        <test-method status="PASS" signature="testfunction()[pri:0, instance:executionEngine.test@5e5792a0]" name="testfunction" duration-ms="34821" started-at="2019-09-03T13:07:25Z" finished-at="2019-09-03T13:08:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testfunction -->
+      </class> <!-- executionEngine.test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
